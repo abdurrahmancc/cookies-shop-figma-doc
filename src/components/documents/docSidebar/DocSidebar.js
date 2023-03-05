@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import { BiSearchAlt } from "react-icons/bi";
 import { useSelector } from "react-redux";
 import FrontEndMenu from "./frontEnd/FrontEndMenu";
+import MobileSidebar from "./MobileSidebar";
 
 const DocSidebar = () => {
   const { theme } = useSelector((state) => state.theme);
@@ -21,7 +22,7 @@ const DocSidebar = () => {
     <>
       <div className="container mx-auto">
         <div className="flex gap-x-20">
-          <div className="w-[350px] h-[calc(100vh-64px)] relative overflow-y-scroll">
+          <div className="w-[350px] hidden md:block h-[calc(100vh-64px)] relative overflow-y-scroll">
             <form
               className={`${
                 theme === "dark" ? "bg-[#0F172A]" : "bg-white"
@@ -49,7 +50,7 @@ const DocSidebar = () => {
               <FrontEndMenu />
             </ul>
           </div>
-          <div id="documents-content" className="w-full h-[calc(100vh-64px)]">
+          <div id="documents-content" className="w-full px-5 md:px-0 h-[calc(100vh-64px)]">
             <div className="my-10">
               <Outlet />
             </div>
