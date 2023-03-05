@@ -7,9 +7,9 @@ const Home = () => {
   const { theme } = useSelector((state) => state.theme);
 
   return (
-    <div className="h-screen ">
+    <div className="h-[calc(100vh-64px)]">
       <div className="h-full  flex flex-col justify-center items-center">
-        <h1 className="text-5xl max-w-[800px] pb-20 font-bold text-center leading-[60px]">
+        <h1 className="lg:text-5xl md:text-3xl text-2xl max-w-[500px] lg:max-w-[800px] pb-20 font-bold text-center lg:leading-[60px]">
           Cookie Shop - Modern eCommerce Figma Template
         </h1>
         <Link to="documents">

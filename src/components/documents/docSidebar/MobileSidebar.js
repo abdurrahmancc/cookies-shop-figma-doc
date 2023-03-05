@@ -1,10 +1,8 @@
 import React from "react";
-import Collapsible from "react-collapsible";
 import { useForm } from "react-hook-form";
 import { BiSearchAlt } from "react-icons/bi";
-import { BsChevronDown } from "react-icons/bs";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import logo from "../../../assets/logo/logo-1.png";
+import logo from "../../../assets/logo/logo.png";
 import { IoMdClose } from "react-icons/io";
 
 const MobileSidebar = ({ toggle, setToggle }) => {
@@ -36,7 +34,7 @@ const MobileSidebar = ({ toggle, setToggle }) => {
       <div id="mobile-top" className="px-6 py-[15px] border-b flex justify-between items-center">
         <div>
           <Link href={"/"}>
-            <img src={logo} width={100} height={36} className="w-[100px] h-auto" alt="logo" />
+            <img src={logo} className="w-[40px] h-auto" alt="logo" />
           </Link>
         </div>
         <div>
